@@ -30,7 +30,7 @@ public class ItemsServiceImpl implements ItemsService {
 				
 	}
 
-	/*@Override
+	@Override
 	public int totalAcumulados() {
 		return locator.getJsonStream()
 				.filter(it->it.getIndicador().equals("cases"))
@@ -40,8 +40,8 @@ public class ItemsServiceImpl implements ItemsService {
 				.stream() //Stream<Item>
 				.collect(Collectors.summingInt(op->op.get().getAcumulados()));
 				
-	}*/
-	@Override
+	}
+	/*@Override
 	public int totalAcumulados() {
 		LocalDate fechaMax=fechaMasReciente();
 		return locator.getJsonStream()
@@ -54,5 +54,5 @@ public class ItemsServiceImpl implements ItemsService {
 				.map(it->convertirTextoFecha(it.getFecha())) //Stream<LocalDate>
 				.max((f1,f2)->f1.compareTo(f2))
 				.orElse(LocalDate.now());
-	}
+	}*/
 }
