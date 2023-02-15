@@ -52,7 +52,7 @@ public class VentanaLibros extends JFrame {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				//recogemos la lista de libros y la volcamos en el TextArea
-				libros.forEach(l->taLibros.setText(taLibros.getText()+l.getTitulo()+"<br>"));
+				libros.forEach(l->taLibros.setText(taLibros.getText()+l.getTitulo()+"\n"));
 			}
 		});
 		this.setVisible(true);
